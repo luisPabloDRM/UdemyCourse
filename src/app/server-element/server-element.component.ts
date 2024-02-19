@@ -31,5 +31,21 @@ export class ServerElementComponent {
     console.log('ngAfterContentInit Called')
   }
 
+  ngAfterContentChecked(){
+    console.log('ngAfterContentChecked Called')
+  }
+
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit Called')
+  }
+
+  ngAfterViewChecked(){
+    console.log('ngAfterViewChecked Called')
+  }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy Called')
+  }
+
 
 }
