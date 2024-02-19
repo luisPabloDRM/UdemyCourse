@@ -1,4 +1,4 @@
-import { Component , Input} from '@angular/core';
+import { Component , Input, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -7,7 +7,29 @@ import { Component , Input} from '@angular/core';
 })
 export class ServerElementComponent {
   @Input() element : {type: string, name: string, content: string};
+  @Input() name: string;
 
 
-  constructor() {}
+  constructor() {
+    console.log('Constructor Called!')
+  }
+
+  ngOnChanges(changes:SimpleChanges){
+    console.log('OnChanges Called')
+    console.log(changes)
+  }
+
+  ngOnInit(){
+    console.log('OnInit Called')
+  }
+
+  ngDoCheck(){
+    console.log('Docheck Called')
+  }
+
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit Called')
+  }
+
+
 }
